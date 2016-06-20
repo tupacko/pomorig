@@ -7,41 +7,41 @@ using System.Windows.Input;
 
 namespace PomoRig
 {
-    internal class ActionCommand : ICommand
-    {
-        #region Constructors
+	internal class ActionCommand : ICommand
+	{
+		#region Constructors
 
-        public ActionCommand(Action action)
-        {
-            this.action = action;
-        }
+		public ActionCommand(Action action)
+		{
+			this.action = action;
+		}
 
-        #endregion Constructors
+		#endregion Constructors
 
-        #region Public Events
+		#region Public Events
 
-        public event EventHandler CanExecuteChanged;
+		public event EventHandler CanExecuteChanged;
 
-        #endregion Public Events
+		#endregion Public Events
 
-        #region Public Methods
+		#region Public Methods
 
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
+		public bool CanExecute(object parameter)
+		{
+			return true;
+		}
 
-        public void Execute(object parameter)
-        {
-            this.action();
-        }
+		public void Execute(object parameter)
+		{
+			this.action();
+		}
 
-        #endregion Public Methods
+		#endregion Public Methods
 
-        #region Constants and Fields
+		#region Constants and Fields
 
-        private readonly Action action;
+		private readonly Action action;
 
-        #endregion Constants and Fields
-    }
+		#endregion Constants and Fields
+	}
 }
