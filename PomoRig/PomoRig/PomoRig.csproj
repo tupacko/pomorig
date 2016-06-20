@@ -85,6 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Resource Include="Resources\Fonts\Lato-Hairline.ttf" />
+    <Resource Include="Resources\Fonts\Neou-Bold.otf" />
+    <Resource Include="Resources\Fonts\Neou-Thin.otf" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\PomoKit.ico" />
