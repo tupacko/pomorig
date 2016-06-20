@@ -1,6 +1,7 @@
 ﻿#region Using Directives
 
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading;
 using System.Windows;
 using System.Windows.Input;
@@ -24,6 +25,7 @@ namespace PomoRig
 			HideCommand = new ActionCommand(HideMainWindow);
 			StartCommand = new ActionCommand(StartTimer);
 			StopCommand = new ActionCommand(StopTimer);
+			AboutCommand = new ActionCommand(NavigateToGitHub);
 
 			InitializeComponent();
 
@@ -89,6 +91,11 @@ namespace PomoRig
 		}
 
 		public ICommand StopCommand
+		{
+			get; private set;
+		}
+
+		public ICommand AboutCommand
 		{
 			get; private set;
 		}
@@ -291,6 +298,11 @@ namespace PomoRig
 			this.timer = null;
 		}
 
+		private void NavigateToGitHub()
+		{
+			Process.Start(GitHubUrl);
+		}
+
 		#endregion Private Methods
 
 		#region Constants and Fields
@@ -298,6 +310,8 @@ namespace PomoRig
 		private const int DefaultCaptionHeight = 20;
 
 		private const int MaxTime = 25 * 60;
+
+		private const string GitHubUrl = @"https://github.com/tupacko/pomorig";
 
 		private Thickness backgroundOffset;
 

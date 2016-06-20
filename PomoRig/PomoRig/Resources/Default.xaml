@@ -40,6 +40,19 @@
 		<Setter Property="Template" Value="{StaticResource ControlButtonTemplate}" />
 	</Style>
 
+	<ControlTemplate x:Key="AboutButtonTemplate" TargetType="{x:Type Button}">
+		<ContentPresenter />
+	</ControlTemplate>
+
+	<Style x:Key="AboutButtonStyle" TargetType="{x:Type Button}">
+		<Setter Property="Template" Value="{StaticResource AboutButtonTemplate}" />
+		<Setter Property="HorizontalAlignment" Value="Center" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="Width" Value="32px" />
+		<Setter Property="Height" Value="32px" />
+		<Setter Property="Cursor" Value="Hand" />
+	</Style>
+
 	<LinearGradientBrush x:Key="AppBackgroundBrush">
 		<GradientStop Color="#52ad03" Offset="0" />
 		<GradientStop Color="#91ce04" Offset="0.23" />
